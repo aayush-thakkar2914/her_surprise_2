@@ -1,0 +1,165 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 350 100% 98%;
+    --foreground: 340 50% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 50% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 50% 20%;
+
+    --primary: 340 82% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 60% 85%;
+    --secondary-foreground: 340 50% 20%;
+
+    --muted: 350 50% 92%;
+    --muted-foreground: 340 30% 50%;
+
+    --accent: 290 60% 75%;
+    --accent-foreground: 340 50% 20%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 350 30% 90%;
+    --input: 350 30% 90%;
+    --ring: 340 82% 62%;
+
+    --radius: 1rem;
+    
+    /* Romantic gradients */
+    --gradient-romance: linear-gradient(135deg, hsl(340, 82%, 62%) 0%, hsl(330, 75%, 70%) 50%, hsl(290, 60%, 75%) 100%);
+    --gradient-sunset: linear-gradient(180deg, hsl(350, 100%, 98%) 0%, hsl(340, 100%, 90%) 50%, hsl(330, 100%, 85%) 100%);
+    --gradient-dreamy: linear-gradient(135deg, hsl(10, 100%, 95%) 0%, hsl(340, 100%, 92%) 50%, hsl(290, 50%, 92%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(340 82% 62% / 0.15);
+    --shadow-romantic: 0 8px 30px -8px hsl(340 82% 62% / 0.25);
+    --shadow-glow: 0 0 30px hsl(340 82% 62% / 0.3);
+    
+    /* Transitions */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 340 30% 12%;
+    --foreground: 350 100% 98%;
+
+    --card: 340 25% 15%;
+    --card-foreground: 350 100% 98%;
+
+    --popover: 340 25% 15%;
+    --popover-foreground: 350 100% 98%;
+
+    --primary: 340 82% 62%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 330 30% 25%;
+    --secondary-foreground: 350 100% 98%;
+
+    --muted: 330 25% 20%;
+    --muted-foreground: 340 30% 70%;
+
+    --accent: 290 50% 45%;
+    --accent-foreground: 350 100% 98%;
+
+    --destructive: 0 62.8% 40.6%;
+    --destructive-foreground: 350 100% 98%;
+
+    --border: 330 25% 25%;
+    --input: 330 25% 25%;
+    --ring: 340 82% 62%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-poppins;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-dancing;
+  }
+}
+
+@layer utilities {
+  .gradient-romance {
+    background: var(--gradient-romance);
+  }
+  
+  .gradient-sunset {
+    background: var(--gradient-sunset);
+  }
+  
+  .gradient-dreamy {
+    background: var(--gradient-dreamy);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-romantic {
+    box-shadow: var(--shadow-romantic);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+  
+  .transition-bounce {
+    transition: var(--transition-bounce);
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-heart-beat {
+    animation: heartbeat 1.5s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  @keyframes heartbeat {
+    0%, 100% {
+      transform: scale(1);
+    }
+    25% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1);
+    }
+    75% {
+      transform: scale(1.05);
+    }
+  }
+}
