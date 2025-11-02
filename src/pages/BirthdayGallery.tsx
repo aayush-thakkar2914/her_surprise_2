@@ -1,31 +1,36 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Cake, ArrowLeft } from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 
 const BirthdayGallery = () => {
   const celebrations = [
     {
+      image: "/bday/bday1.jpg",
       quote: "Making your day as special as you are",
       message: "Every birthday with you is a blessing 🎂",
     },
     {
+      image: "/bday/bday2.jpg",
       quote: "Celebrating the gift of you",
       message: "You deserve all the happiness in the world 🎁",
     },
     {
+      image: "/bday/bday3.jpg",
       quote: "Another year of loving you",
       message: "Here's to many more birthdays together 🎈",
     },
     {
+      image: "/bday/bday4.jpg",
       quote: "Your special day, our special moment",
       message: "Making memories that last forever 🎉",
     },
     {
+      image: "/bday/bday5.jpg",
       quote: "You make life worth celebrating",
       message: "Happy birthday to my everything 💝",
     },
     {
+      image: "/bday/bday6.jpg",
       quote: "Age is just a number, love is timeless",
       message: "Growing older together, falling deeper in love 🌹",
     },
@@ -39,13 +44,13 @@ const BirthdayGallery = () => {
         transition={{ duration: 0.6 }}
         className="container mx-auto max-w-6xl"
       >
-        <Link
-          to="/moments"
+        <button
+          onClick={() => window.history.back()}
           className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-smooth mb-8"
         >
           <ArrowLeft size={20} />
           <span className="font-poppins">Back to Moments</span>
-        </Link>
+        </button>
 
         <div className="text-center mb-16">
           <motion.h1
@@ -76,8 +81,12 @@ const BirthdayGallery = () => {
               whileHover={{ scale: 1.03 }}
             >
               <Card className="shadow-romantic hover:shadow-glow transition-smooth bg-card/90 backdrop-blur overflow-hidden">
-                <div className="aspect-square bg-gradient-to-br from-secondary/30 to-accent/20 flex items-center justify-center">
-                  <Cake className="text-primary" size={64} />
+                <div className="aspect-square bg-gradient-to-br from-secondary/30 to-accent/20 flex items-center justify-center overflow-hidden">
+                  <img
+                    src={celebration.image}
+                    alt={celebration.quote}
+                    className="w-full h-full object-contain"
+                  />
                 </div>
                 <CardContent className="p-6">
                   <p className="text-xl font-dancing font-bold text-primary mb-3 text-center">
@@ -91,17 +100,6 @@ const BirthdayGallery = () => {
             </motion.div>
           ))}
         </div>
-
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-          className="text-center mt-12"
-        >
-          <p className="text-muted-foreground font-poppins italic">
-            [Add birthday celebration photos here] 🎉💕
-          </p>
-        </motion.div>
       </motion.div>
     </div>
   );
