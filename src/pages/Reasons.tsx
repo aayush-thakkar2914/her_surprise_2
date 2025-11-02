@@ -31,6 +31,8 @@ const reasons = [
   "Your loyality, like this is most lovely thing you are always loyal to me koi bhi ladka ho you never talks to him and sorry foe all the female frnds I had till now",
   "Your sleepy voice uff hayy like I die for that itna cutu voice note hota hai na every morning I cant tell",
   "Your sleepy eyes uff those snaps in the morning ankhe khuli ho ya bandh meri bacha subah subah looks so cutu ummmahhh",
+  "Your sleepy eyes uff those snaps in the morning ankhe khuli ho ya bandh meri bacha subah subah looks so cutu ummmahhh",
+  "Your sleepy eyes uff those snaps in the morning ankhe khuli ho ya bandh meri bacha subah subah looks so cutu ummmahhh",
   
   
   // Add 90 more reasons - keeping it shorter for now
