@@ -9,14 +9,14 @@ const reasons = [
   "Your bold sharp eyes jiss mai mein hamesha kho jata hu dub jata hu uff my bachaa I love them",
   "Your careful nature like bobu ki care sabse pehle meri bacha karegi, like meri bacha ki care ke bina toh bobu din bhar kuch na kuch kaand karta rahega haina 🤣",
   "YOur trust in me like bobu kuch bhi bobu ruth jaye gussa kare irritate ho jaye kabhi but meri bachaa trust me ki uska bobu uska hi hai Lovee you dher sara merii bacha",
-  "The way you say “bobuu” with that cute tone itna sweet lagta hai, like pure love wrapped in one word. My heart literally melts every single time, my bachaa",
-  "When you get possessive and say “tum sirf mere ho” — uff my lioness, that’s the most adorable and hottest thing ever. I love your little jealous looks, meri jaan.",
+  "The way you say \"bobuu\" with that cute tone itna sweet lagta hai, like pure love wrapped in one word. My heart literally melts every single time, my bachaa",
+  "When you get possessive and say \"tum sirf mere ho\" — uff my lioness, that's the most adorable and hottest thing ever. I love your little jealous looks, meri jaan.",
   "Jab tum gussa hoing and muh banaing and that pout wala gussa its so cutu merii bachudii yk kabhi kabhi toh woh dekhne ke liye tumhe mai pareshan karta hu",
   "The way you laugh at my stupid jokes, even the ones that make no sense meri bachaa, that laugh is therapy to my soul.",
   "The way you share everything with me har choti baat tum batati ho every single updates it makes me so happy merii bachaa.",
-  "The way you care for me when I’m upset jaise tum khud hurt ho gayi ho. That’s my bachaa, meri emotional healer.",
+  "The way you care for me when I'm upset jaise tum khud hurt ho gayi ho. That's my bachaa, meri emotional healer.",
   "Your voice, meri jaan, so soft, so loving everytime I listen toh mann karta hai bas sunte hi rahu.",
-  "When you motivate me by saying “mera bobu sabse best hai”, I feel mein kuch bhi kar sakta hu, bas meri bachaa mere saath ho.",
+  "When you motivate me by saying \"mera bobu sabse best hai\", I feel mein kuch bhi kar sakta hu, bas meri bachaa mere saath ho.",
   "The way you hug me like I still remember the first time we hugged it gave me all the happiness of the world it was so warming and lovely hug",
   "Your touch makes me feel so good it gives me the confidence of the love you have for me",
   "The way you listen to my bak bak like kitni bhi boring interesting ho kesi bhi ho you listen to them ccarefully and makes me fell so important",
@@ -63,9 +63,6 @@ const reasons = [
   "Your fitness like meri bachaa is so fit and I promise meri bachaa ka bobu bhi jaldi utna fit ho jayega jesa meri baby want ❤️",
   "Your beautiful eyes, meri bachaa ki aankhein itni expressive hai ki bina bole hi sab samajh aata hai, absolutely mesmerizing.",
   "Those special suprising snaps which meri bachaa tum mujhe bhejti ho like that beauty of yours don't have words with which i can express likne bethunga yeh card kam pad jaing."
-  
-  
-  // ...Array.from({ length: 90 }, (_, i) => `Reason #${i + 11}: Every little thing about you is perfect`),
 ];
 
 const Reasons = () => {
@@ -121,17 +118,19 @@ const Reasons = () => {
                 onClick={() => toggleCard(index)}
                 className="cursor-pointer"
               >
-                <Card className="h-40 shadow-soft hover:shadow-romantic transition-smooth bg-card/90 backdrop-blur">
-                  <CardContent className="h-full flex items-center justify-center p-4">
+                <Card className="h-48 md:h-52 shadow-soft hover:shadow-romantic transition-smooth bg-card/90 backdrop-blur">
+                  <CardContent className="h-full flex items-center justify-center p-3 md:p-4">
                     {isFlipped ? (
-                      <motion.p
+                      <motion.div
                         initial={{ opacity: 0, rotateY: 90 }}
                         animate={{ opacity: 1, rotateY: 0 }}
                         transition={{ duration: 0.4 }}
-                        className="text-sm text-center text-foreground font-poppins"
+                        className="w-full h-full overflow-y-auto scrollbar-thin scrollbar-thumb-primary/20 scrollbar-track-transparent"
                       >
-                        {reason}
-                      </motion.p>
+                        <p className="text-xs md:text-sm text-center text-foreground font-poppins leading-relaxed">
+                          {reason}
+                        </p>
+                      </motion.div>
                     ) : (
                       <motion.div
                         initial={{ opacity: 0 }}
