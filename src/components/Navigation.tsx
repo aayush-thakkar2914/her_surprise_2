@@ -6,7 +6,7 @@ import { useState, useRef, useEffect } from "react";
 
 const Navigation = () => {
   const location = useLocation();
-  const [musicPlaying, setMusicPlaying] = useState(false);
+  const [musicPlaying, setMusicPlaying] = useState(true);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {

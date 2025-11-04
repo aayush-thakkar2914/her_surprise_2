@@ -6,23 +6,23 @@ const BirthdayGallery = () => {
   const celebrations = [
     {
       image: "/bday/bday1.jpg",
-      quote: "Making your day as special as you are",
-      message: "Every birthday with you is a blessing 🎂",
+      quote: "I always want to make your every day special as much as you aare my bachaa ❤️",
+      message: "11th March 2002 your birthday a day when earth got a beautiful princess a cute bachaa of mine.",
     },
     {
       image: "/bday/bday2.jpg",
-      quote: "Celebrating the gift of you",
-      message: "You deserve all the happiness in the world 🎁",
+      quote: "Even having a cupcake tastes like having the most seetest dish of the world as I have my bachaa with me who is the sweetest person of the world😘🥹",
+      message: "Thanks to your mummy and papa for bringing mera sweet bacha in this world my baby I always gonna be grateful to them and the god as they gifted me you 💖🫂",
     },
     {
       image: "/bday/bday3.jpg",
-      quote: "Another year of loving you",
-      message: "Here's to many more birthdays together 🎈",
+      quote: "Cheers to my bachaa turning 23 that day and night was the most sweetest night my bachaa",
+      message: "My bachaa turned 23 she was lookng like a jalpari in that white dress and the most cute thing she had with herself was that bracelet as her bobu gifted her that cheers to many more lovely year and bday celebration of us merii bachaa 😘🥳",
     },
     {
       image: "/bday/bday4.jpg",
-      quote: "Your special day, our special moment",
-      message: "Making memories that last forever 🎉",
+      quote: "My bachaa made my day special with those pyare se gift that mug and the shirt 🥹🫂❤️",
+      message: "Meri bachaa yk this was the first time someone gifted me something in the past few years like from the many years my  bday was like no fun no gifts just haan bday hai kyaa ho gaya but this was the bday you made me feel special and even I had tears then as well as while writing this, that mug and shirt meant a life for me meri bachaa Lovee you dher saraa merii bachudii ❤️🫂🥹",
     },
     {
       image: "/bday/bday5.jpg",
