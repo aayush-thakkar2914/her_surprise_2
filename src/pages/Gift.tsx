@@ -11,6 +11,16 @@ const Gift = () => {
     setIsOpened(true);
   };
 
+  // YOUTUBE VIDEO SETUP:
+  // 1. Upload your video to YouTube (can be "Unlisted" for privacy)
+  // 2. Go to your video, click Share, copy the URL
+  // 3. Your URL looks like: https://www.youtube.com/watch?v=dQw4w9WgXcQ
+  // 4. Copy the part after "v=" (that's your video ID)
+  // 5. Replace YOUR_YOUTUBE_VIDEO_ID below with your actual ID
+  
+  
+  const YOUTUBE_VIDEO_ID = "Ud8doyENFYs";
+
   return (
     <div className="min-h-screen pt-32 pb-20 px-4 gradient-romance flex items-center justify-center">
       <div className="container mx-auto max-w-4xl">
@@ -124,13 +134,14 @@ const Gift = () => {
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.8 }}
-                className="w-full"
+                className="w-full relative"
               >
                 {/* Confetti Effect */}
                 {[...Array(30)].map((_, i) => (
                   <motion.div
                     key={i}
                     className="absolute"
+                    style={{ pointerEvents: "none", zIndex: 50 }}
                     initial={{
                       x: "50%",
                       y: "50%",
@@ -168,10 +179,14 @@ const Gift = () => {
                       <h2 className="text-3xl font-dancing font-bold text-primary mb-6">
                         A Video Message For You
                       </h2>
-                      <div className="aspect-video bg-muted rounded-lg flex items-center justify-center">
-                        <p className="text-muted-foreground font-poppins">
-                          [Video player placeholder - Add your personal video message here]
-                        </p>
+                      <div className="aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
+                        <iframe
+                          className="w-full h-full"
+                          src={`https://www.youtube.com/embed/${YOUTUBE_VIDEO_ID}?autoplay=1&rel=0&modestbranding=1`}
+                          title="Personal Video Message"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        />
                       </div>
                       <p className="mt-6 text-foreground font-poppins italic">
                         "Every moment with you is a gift. This website is just a small way to show how much you mean to me."
