@@ -27,7 +27,7 @@ const BirthdayGallery = () => {
     {
       image: "/bday/bday5.jpg",
       quote: "You make life worth celebrating",
-      message: "Happy birthday to my everything 💝",
+      message: "Thanksss for all those gifts and cutu sa cake merii bachaaa, LOvee you dher saraa merii bachudi 😘❤️🫂 ",
     },
     {
       image: "/bday/bday6.jpg",
