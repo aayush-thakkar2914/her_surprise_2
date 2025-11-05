@@ -8,7 +8,7 @@ const VirtualDatesGallery = () => {
     {
       img: "/virtualdates/date3.jpg",
       quote: "Distance means nothing when you mean everything",
-      message: "Our virtual movie nights are my favorite 🎬",
+      message: "Our virtual movie nights are still pending 🤣🎬",
     },
     {
       img: "/virtualdates/date1.jpg",
